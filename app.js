@@ -19,6 +19,8 @@ app.use(cors({
 app.use(bodyParser.urlencoded({ extended: true }))
 // parse requests of content-type - application/json
 app.use(bodyParser.json())
+app.use(express.json());
+
 
 // Configuring the database
 dbConfig();
