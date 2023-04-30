@@ -3,9 +3,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const dbConfig = require('./config/database.config.js');
 const dotenv = require('dotenv');
+
+dotenv.config();
+
 const routes = require('./routes/routes.js');
 const cors = require('cors');
-dotenv.config();
 
 // create express app
 const app = express();
@@ -27,6 +29,10 @@ dbConfig();
 
 //define routes
 app.use('/api', routes);
+app.get('/', (req, res) => {
+    res.send('Hello World');
+}
+)
 
 // error handler
 app.use((err, req, res, next) => {
