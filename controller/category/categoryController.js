@@ -1,4 +1,5 @@
-const News = require("../../Models/News/NewsModels");
+
+const News = require("../../Models/News/newsModels");
 const Category = require("../../Models/category/categoryModels");
 
 const getAllCategories = async (req, res) => {
